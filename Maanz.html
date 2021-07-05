@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Maanz AI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+<style>
+  body {
+
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .nav-item {
+    padding-top: 0px;
+    margin: 30px;
+    color: rgb(8, 8, 8);
+   
+  }
+
+  .hero-image {
+    background-image: url("images/fifth.jpg");
+    background-color: #cccccc;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1366px 500px;
+     
+    position: relative;
+
+  }
+
+  .hero-text {
+
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: rgb(8, 8, 8);
+  }
+
+#htext{
+  font-size: 145%;
+}
+
+
+
+
+  .star-image {
+    background-image: url("images/fourth.jpg");
+    background-color: #f7f7f7;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1366px 500px;
+    clip-path: polygon(0 27%, 100% 0%, 100% 100%, 0 100%);
+    position: relative;
+
+  }
+
+  #mytext {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 182, 25);
+  }
+
+
+
+
+
+  .card {
+    margin-top: 140%;
+    border-radius: 25px;
+    max-width:80% ;
+    max-height: 44%;
+    
+    margin-left: 10%;
+    font-size: 95%;
+    text-align: center;
+    background-color: #f1f1f1;
+   
+  }
+
+  .row {
+    margin: 0 -50px;
+  }
+
+
+
+
+  #myHeader {
+
+    color: black;
+    padding: 40px;
+    text-align: center;
+    font-size: 250%;
+  }
+
+
+
+  #mySuccess {
+
+    text-align: center;
+    position: absolute;
+    font-weight: bold;
+   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+
+  }
+
+  #dtext {
+    text-align: center;
+    font-size: 40%;
+
+  }
+
+
+  .partner-image {
+
+    background-color: #e79223;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1366px 500px;
+    clip-path: polygon(0 0, 100% 28%, 100% 100%, 0 100%);
+    position: relative;
+  }
+
+  #ourPartners {
+    text-align: center;
+    font-size: 100%;
+    font-size: 300%;
+    margin-top: 10%;
+    padding-top: 8%;
+    font-weight: bold;
+    
+  }
+
+
+  #dummy {
+    text-align: center;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .button4 {
+    border-radius: 12px;
+    border-radius: 10%;
+  }
+
+  .button {
+    background-color: #e79223;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 45%;
+    height: 10%;
+
+  }
+
+  html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+
+
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+
+
+ .footer-distributed .footer-icons{
+	margin-top: 25px;
+} 
+
+ .footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+} 
+
+
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+.top {
+    border-radius: 12px;
+    border-radius: 10%;
+  }
+
+  .button3 {
+    background-color: #e79223;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 18px 2px;
+    cursor: pointer;
+    /* margin-left: 45%; */
+     height: 10%; 
+     margin-left:5% ;
+
+  }
+
+.card-link{
+  color: rgb(255, 182, 25);
+  font-weight: bold;
+}
+</style>
+
+<body>
+
+
+
+
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+
+      <a class="navbar-brand" href="#">
+        <img src="images/second.png" alt="logo" style="width:60px;">
+      </a>
+    <li class="nav-item">
+      <a class="nav-link text-dark  pr-5  " href="#"><b>Home    </b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="#"><b>Domain</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="#" ><b>Life at Maanz</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="#" ><b>Career</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="#" ><b>Contact Us</b></a>
+    </li>
+    <button class="top button3">lorem iposm</button>
+  </ul>
+
+  <div class="hero-image" class="responsive">
+    <div class="hero-text">
+      <h1 style="font-size:50px;font-weight: bold;  "   >Maanz AI</h1>
+      <h3 id="htext">Proivide intelligent solution with Self Learning</h3>
+      <h3 id="htext">machine. Employ intelligently with Engineering</h3>
+       <h3 id="htext"> Techniques with better solution.</h3> 
+    </div>
+
+     <div class="container  ">
+      <div class="row" style="margin-left: 10%;">
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem; ">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Lorem Ipsum</h5>
+              
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" style ="margin-left: -6%;">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Lorem Ipsum</h5>
+           
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+               
+                .</p>
+              
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3" style="margin-left: -6%;">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Lorem Ipsum</h5>
+              
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              </p>
+          
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3" style="margin-left: -6%;">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Lorem Ipsum</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+             
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> 
+
+  </div>
+
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="domain" class="responsive">
+    <div class="domain-text">
+     
+
+      <p id="myHeader"> <b>Domains</b></p>
+      <div class="row">
+        <div class="column" style="margin-left: 18%; text-align: center; ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"  fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+            <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+          </svg>
+          <h2 class="mt-3">Automation</h2><br><br>
+          <p>Lorem Ipsum is<br> simply dummy text of<br> the printing and<br> typesetting industry</p>
+          <a href="#" class="card-link">Learn More</a>
+        </div>
+        <div class="column" style="margin-left: 8%;text-align: center; ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          </svg>
+          <h2 class="mt-3">Artificial <br> intelligence</h2><br>
+          <p>Lorem Ipsum is<br> simply dummy text of<br> the printing and<br> typesetting industry</p>
+          <a href="#" class="card-link">Learn More</a>
+        </div>
+
+        <div class="column" style="margin-left: 8% ;  text-align: center;   ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-file-code-fill" viewBox="0 0 16 16">
+            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 1 1 .708-.708z"/>
+          </svg>
+          <h2 class="mt-3">Websites</h2><br><br>
+          <p>Lorem Ipsum is<br> simply dummy text of<br> the printing and<br> typesetting industry</p>
+          <a href="#" class="card-link">Learn More</a>
+        </div>
+        <div class="column" style="margin-left: 8% ; text-align: center;  ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-exclude" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm12 2H5a1 1 0 0 0-1 1v7h7a1 1 0 0 0 1-1V4z"/>
+          </svg>
+          <h2 class="mt-3">Digital <br> Marketing</h2><br>
+          <p>Lorem Ipsum is<br> simply dummy text of<br> the printing and<br> typesetting industry</p>
+          <a href="#" class="card-link">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+
+    <div class="star-image" class="responsive">
+      <div class="star-text">
+        <h1 id="mytext">Why US</h1>
+        <div class="row">
+          <div class="column"
+            style="margin-left: 11%; text-align: center; color:rgb(253, 253, 253) ; padding-top: 15%  ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+              <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"/>
+              <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
+            </svg>
+            <h2 class="mt-">Team Work</h2>
+            <p>We work togeather to acheive <br> what seems impossible.</p><br><br>
+            <a href="#" class="card-link mt-4">Learn More</a>
+          </div>
+          <div class="column" style="margin-left: 8%;text-align: center;color:rgb(255, 255, 255) ; padding-top: 15%; ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+              <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+            </svg>
+            <h2 class="mt-3">Excellence <br></h2>
+            <p>Business is always successful<br>by flawlessservice delivery<br>excellingclient's<br>expectations</p>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+
+          <div class="column"
+            style="margin-left: 8% ;  text-align: center; color: rgb(255, 255, 255);padding-top: 15%; ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <h2 class="mt-3">Flexibility</h2>
+            <p>We are Always ready to<br>adapt to  future trends</p><br><br>
+            <a href="#" class="card-link">Learn More</a>
+          </div>
+          <div class="column" style="margin-left: 8% ; text-align: center; color:rgb(253, 253, 253) ;padding-top: 15%; ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+              <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            </svg>
+            <h2 class="mt-3">Innovation</h2>
+            <p>We are open to creative<br>ideas that lead to<br> innovation by challenging<br> conventional</p>
+            <a href="#" class="card-link ">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="Success">
+      <h1 id="mySuccess">
+        Success Stories
+        <h1><br>
+          <p id="dtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+            ever since the 1500s </p>
+
+          <div class="row">
+            <div class="column"
+              style="background-color:rgb(247, 242, 242); margin-left: 18%; width: 20%;   text-align: center; height: 100%; font-size: 48%;  font-family: Arial, Helvetica, sans-serif;">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+                ever since the 1500s.Contrary to popular belief, Lorem Ipsum is not simply random text.
+              </p>
+              <a href="#" class="card-link">Learn More</a>
+            </div>
+            <div class="column"
+              style="background-color:rgb(247, 242, 242); margin-left:2% ;  width: 20%;    text-align: center;font-size: 48% ;font-family: Arial, Helvetica, sans-serif;">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+                ever since the 1500s.Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
+            <div class="column"
+              style="background-color:rgb(247, 242, 242);margin-left: 2%;      width:20%;  text-align: center;font-size: 48% ;  font-family: Arial, Helvetica, sans-serif;">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+                ever since the 1500s.Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
+
+          </div>
+
+    </div>
+
+
+    <div class="partner-image" class="responsive">
+
+      <h1 id="ourPartners">Partners</h1>
+
+      <div style="width:100%;display:inline-block;">
+        <div style="width:50%;float:left">
+
+          <img src="images/first.png"
+            style="margin:0 auto;display:block; text-align: center; width: 50%; margin-top: 15%; margin-left: 55%;" />
+        </div>
+        <div style="width:50%;float:left">
+          <img src="images/third.png"
+            style="margin:0 auto;display:block; text-align: center; width: 20%; margin-top: 10%; margin-left: 20%;" />
+
+          <br />
+          <span
+            style="font-size: 12px; color: #4c4c4c; font-family: 'Helvetica Neue',sans-serif;text-align: center;"></span>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <h1 id="dummy">Lorem Ipsum has been the industry Standard dummy text</h1>
+    </div>
+    <br>
+    <div>
+      <button class="button button4">Lorem ipsum</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="images/second.png">
+		<p>Adress</p>
+
+				<p class="footer-links">
+					<a href="#">Address</a>
+					<br>
+					<a >islamabad,Pakistan</a>
+				
+					
+					
+					
+				</p>
+        <p class= 'footer-links'>
+
+          <a href="#">Call Us</a>
+					<br>
+					<a>051-5455643</a>
+					
+				
+
+
+        </p>
+
+        <p class= 'footer-links'>
+
+          <a href="#">Email</a>
+					<br>
+					<a>info@maanz.ai</a>
+					
+					
+
+
+        </p>
+
+				
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p>
+						Privacy Policy</p>
+				</div>
+        <div>
+					<i class="fa fa-map-marker"></i>
+					  <p>
+						Terms and Conditions</p>
+				</div>
+        <div>
+					<i class="fa fa-map-marker"></i>
+					  <p>
+						Disclaimer</p>
+				</div>
+        
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="">Useful Links</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>Social Media</span>
+				</p>
+				<div class="footer-icons">
+          <a href="#" class="fa fa-facebook"></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+
+
+</body>
+
+</html>
